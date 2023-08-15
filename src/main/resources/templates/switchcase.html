@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch case</title>
+</head>
+<body>
+<h1>Thymeleaf switch case demo</h1>
+<h4 th:utext="${user.userName}"></h4>
+<div th:switch="${user.role}">
+  <p th:case="'ADMIN'">User is an administrator</p>
+  <p th:case="'MANAGER'">User is a manager</p>
+  <p th:case="'GUEST'">User is a guest</p>
+  <p th:case="*">User is some other thing</p>
+</div>
+
+</body>
+</html>
+https://github.com/QUEENOCHANYAABICHE/ThymeLeaf-.git

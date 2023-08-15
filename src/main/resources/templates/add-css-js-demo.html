@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>add css and js to thymeleaf</title>
+  <link th:href = "@{/static/main.css}" rel="stylesheet">
+   <script type="text/javascript" th:src ="@{/static/actions.js}"></script>
+</head>
+<body>
+<h2>Heading</h2>
+<p>This is text on which we want to apply <strong>  very special </strong>styling</p>
+
+<button type="button" th:onclick="demo()">Show alert</button>
+</body>
+</html>

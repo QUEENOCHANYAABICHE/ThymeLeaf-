@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Email</title>
+</head>
+<body>
+<table class ="table">
+    <thead>
+    <tr>
+        <th>User Name</th>
+        <th>User Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.userName}"></td>
+        <td th:text="${user.email}"></td>
+        <td><a class="btn btn-primary" th:if="${user.role} == 'ADMIN'">Update</a>
+            <a class="btn btn-danger" th:if="${user.role}=='ADMIN'">Delete</a>
+            <a class="btn btn-primary" th:unless="${user.role} == 'ADMIN'">View</a>
+
+        </td>
+
+    </tr>
+    </tbody>
+
+</table>
+</body>
+</html>
